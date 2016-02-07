@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>.: Free-medical-ads :.</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+	<link href="css/bootstrap-theme.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+    <link type="text/css" rel="stylesheet" href="css/jquery.selectBoxIt.css" />
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	
+	<style>
+  .navbar-brand {padding-top: 6px; padding-left: 0;}
+  .res{height: auto; width: 100%;}
+  @media (max-width: 480px) {
+    .res{height: auto; width: 75%;}
+  }
+
+	@media (max-width: 992px) {
+		.white-container, .footer-container, .header-container, .blueheader-container, .curveheader-container {
+			margin: 0px;
+			padding-left: 15px;
+			padding-right: 15px;			
+		}
+	}
+
+	.mt20{
+		margin-bottom:20px;
+	}
+	.product-list
+	{				
+		width:100%;
+		/*max-height: 1000px;*/
+		overflow: hidden;
+		/*margin-bottom: -1.875em;  30px */
+		-webkit-column-count: 4;
+		-webkit-column-gap: 8px; /* 30px */
+		-webkit-column-fill: balance;
+		-moz-column-count: 4;
+		-moz-column-gap: 8px; /* 30px */
+		-moz-column-fill: balance;
+		column-count: 4;
+		column-gap: 8px; /* 30px */
+		column-fill: balance;
+		/*float:left;	*/
+
+	}
+	.product-item
+	{
+		
+			/* display: inline-block; */
+			margin-bottom: 8px; /* 15px 30px */			
+			width:100%;
+			height:100%;
+			-webkit-column-break-inside: avoid;
+			page-break-inside: avoid;
+			break-inside: avoid;
+			float:left;
+			
+	}
+
+  @-moz-document url-prefix() {
+    .product-item {
+        float: none;
+    }
+}
+	
+	@media only screen and ( max-width: 1024px ) /* 640px */
+	{
+		.product-list
+		{
+			-webkit-column-count: 3;
+			-webkit-column-gap: 8px; /* 15px */
+			-moz-column-count: 3;
+			-moz-column-gap: 8px; /* 15px */
+			column-count: 3;
+			column-gap: 8px; /* 15px */
+		}
+			.product-item
+			{
+				margin-bottom: 8px; /* 15px */
+			}
+	}
+	
+	@media only screen and ( max-width: 768px ) /* 640px */
+	{
+		.product-list
+		{
+			-webkit-column-count: 2;
+			-webkit-column-gap: 8px; /* 15px */
+			-moz-column-count: 2;
+			-moz-column-gap: 8px; /* 15px */
+			column-count: 2;
+			column-gap: 8px; /* 15px */
+		}
+			.product-item
+			{
+				margin-bottom: 8px; /* 15px */
+			}
+		/*
+		.product-list-container {
+			width: 400px;
+			margin-left: auto;
+			margin-right: auto;			
+		}
+		*/
+	}
+	
+	/*
+	@media only screen and ( max-width: 20em )
+	{
+		.product-list
+		{
+			-webkit-column-count: auto;
+			-moz-column-count: auto;
+			column-count: auto;
+		}
+	}
+	*/
+	</style>
+  </head>
+  <body>
+  <div class="container">
+    <div class="header-container clearfix">
+
+      <!-- Static navbar -->
+      <div class="navbar navbar-default" role="navigation">
+          <div class="navbar-header mt110">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#"><img src="images/New_logo.png" alt=""  class="res" /></a>
+          </div>
+          <div class="medical-ttl">          	
+          </div>
+          <div class="navbar-collapse collapse">
+            
+            <ul class="nav navbar-nav custome-navbar navbar-right">
+              <li class="active"><a href="#">Home</a></li>
+              <li><a href="#">Search </a></li>
+              <li><a href="#">Stores </a></li>
+              <li><a href="#">Forum </a></li>
+              <li><a href="#">Category</a></li>
+              <li><a href="#">Features </a></li>
+              <li><a href="#">Post a Free ad</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+      </div>
+      
+  	</div>
+    <div class="blueheader-container">
+    	<div class="location-holdr">
+        	Viewing Listing for <strong>All Locations :</strong>
+            <a href="#"><img src="images/changelocation-btn.png" alt="" /></a>
+        </div>
+    	<ul class="nav nav-pills custome-pills">
+        	<li><a href="#">Recent Listing: 24 Hours</a></li>  
+            <li>|</li>  
+            <li><a href="#">1 Week</a></li>  
+            <li>|</li>  
+            <li><a href="#">2 Weeks</a></li>  
+            <li>|</li>  
+            <li><a href="#">3 Weeks </a></li>
+        </ul>
+    </div>
+    
+    <div  class="curveheader-container clearfix">
+    	<div class="login-holder">
+        	<div class="login-welcomtxt">
+            	<div class="logTxt">
+                	Welcome Guest <span> (<a href="#">Register</a> | <a href="#">Login</a>)</span>
+                </div>
+            </div>
+        </div>
+    	<div>
+       	  <div class="ritdvdr">
+              <form class="form-inline custm-search" role="form">
+              <div class="form-group">
+                <input type="text" class="form-control input-sm" placeholder="Type Here To Search Classifieds" size="26">
+            </div>
+              
+              <div class="form-group">
+                <select class="form-control">
+                    <option>All Categories</option>
+                    <option>something</option>
+                </select>
+              </div>
+              
+              <div class="form-group">
+                <select class="form-control">
+                    <option>All Fields</option>
+                    <option>something</option>
+                </select>
+              </div>
+              
+              <div class="form-group">
+                <select class="form-control">
+                    <option>All Regions</option>
+                    <option>something</option>
+                </select>
+              </div>
+              
+              <div class="form-group">
+              <button type="submit" class="btn btn-default"><strong>Search</strong></button>
+              </div>
+            </form>
+          </div>
+        </div>
+    </div>
+  </div> <!-- /container -->
+      <div class="container">
+      	<div class="white-container clearfix">
+            <div class="row">
+            	<div class="col-sm-2 pull-right marg-b15">
+                    <div class="pull-right">
+                    <select class="form-control input-sm">
+                        <option>English</option>
+                    </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+  	<div class="container">
+    <div class="white-container clearfix">
+    	<div class="row">
+                	<!-- left pannel-->
+                	<div class="span-col-sm-3">
+                    	<div class="gry-holder">
+                        	<h2><i class="fa fa-comments"></i><span>What's New</span></h2>
+                            	<div id="announcement">
+                                    <ul class="grycntain-box">
+                                        <li><a href="#">Sed tempus vestibu blandit. Suspend posuere, augue in congue fringilla.</a></li>
+                                        <li><a href="#">Sed tempus vestibu blandit. Suspend posuere, augue in congue fringilla.</a></li>
+                                        <li><a href="#">Sed tempus vestibu blandit. Suspend posuere, augue in congue fringilla.</a></li>
+                                        <li><a href="#">Sed tempus vestibu blandit. Suspend posuere, augue in congue fringilla.</a></li>
+                                        <li><a href="#">Sed tempus vestibu blandit. Suspend posuere, augue in congue fringilla.</a></li>
+                                        <li><a href="#">Sed tempus vestibu blandit. Suspend posuere, augue in congue fringilla.</a></li>
+                                    </ul>
+                                </div>
+                                <div class="ticker-nav">
+                                <a class="btnUp announcement-btnUp" href="#"><img src="images/arrow-up.png" alt="&lt;" /></a>
+                                <a class="btnDown announcement-btnDown" href="#"><img src="images/arrow-down.png" alt="&gt;" /></a>
+                                </div>
+                                
+                        </div>
+                        
+                        <div class="comnity-hlder">
+                        	<a href="#"><figure><img src="images/comunity.jpg" alt="" /></figure></a>
+                        </div>
+                        
+                        <div class="bnr-hlder">
+                            <a href="#"><figure><img src="images/adertize.jpg" alt="" /></figure></a>
+                        </div>
+                
+                        <div class="bnr-hlder">
+                            <a href="#"><figure><img src="images/comunity.jpg" alt="" /></figure></a>
+                        </div>
+                
+                        <div class="bnr-hlder">
+                            <a href="#"><figure><img src="images/adertize.jpg" alt="" /></figure></a>
+                        </div>
+                
+                        <div class="bnr-hlder">
+                            <a href="#"><figure><img src="images/comunity.jpg" alt="" /></figure></a>
+                        </div>
+                        
+                    </div>
+                    <!-- left pannel end-->
+                    
+                    <!-- middle pannel-->
+                    <div class="span-col-sm-6">
+                            	<div class="slidng-hlder">
+                                	<div id="carousel-top" class="carousel slide" data-ride="carousel">
+                                      <!-- Indicators -->
+                                      <ol class="carousel-indicators">
+                                        <li data-target="#carousel-top" data-slide-to="0" class="active"></li>
+                                        <li data-target="#carousel-top" data-slide-to="1"></li>
+                                        <li data-target="#carousel-top" data-slide-to="2"></li>
+                                        <li data-target="#carousel-top" data-slide-to="3"></li>
+                                        <li data-target="#carousel-top" data-slide-to="4"></li>
+                                        <li data-target="#carousel-top" data-slide-to="5"></li>
+                                      </ol>
+                                    
+                                      <!-- Wrapper for slides -->
+                                      <div class="carousel-inner">
+                                        <div class="item active">
+                                          <a href="#"><img src="images/banner1.jpg" alt="" /></a>
+                                        </div>
+                                        
+                                        <div class="item">
+                                          <a href="#"><img src="images/banner2.jpg" alt="" /></a>
+                                        </div>
+                                        
+                                        <div class="item">
+                                          <a href="#"><img src="images/banner3.jpg" alt="" /></a>
+                                        </div>
+                                        
+                                        <div class="item">
+                                          <a href="#"><img src="images/banner4.jpg" alt="" /></a>
+                                        </div>
+                                        
+                                        <div class="item">
+                                          <a href="#"><img src="images/banner5.jpg" alt="" /></a>
+                                        </div>
+                                        
+                                        <div class="item">
+                                          <a href="#"><img src="images/banner6.jpg" alt="" /></a>
+                                        </div>
+                                       
+                                      </div>
+                                    
+                                      <!-- Controls -->
+                                      <a class="left carousel-control" href="#carousel-top" role="button" data-slide="prev">
+                                        <span class="glyphicon glyphicon-chevron-left"></span>
+                                      </a>
+                                      <a class="right carousel-control" href="#carousel-top" role="button" data-slide="next">
+                                        <span class="glyphicon glyphicon-chevron-right"></span>
+                                      </a>
+                                    </div>
+                                </div><!--slidng-hlder end-->
+                        
+                        
+                    	<div class="row">
+                        	<div class="col-md-6 col-sm-12">
+                            	<div class="sky-hlder">
+                                	<h2>FEATURED LISTINGS</h2>
+                                    <ul class="wht-box">
+                                    	<li>
+                                        	<p>Filed Medical Assistant/phlebotomist in Detroit,MI</p>
+                                        	<a href="#">Health Care Providers > Assistants</a>
+                                        	<a href="#" class="view-rit"><div>View</div></a>
+                                        </li>
+                                        <li>
+                                        	<p>Filed Medical Assistant/phlebotomist in Detroit,MI</p>
+                                        	<a href="#">Health Care Providers > Assistants</a>
+                                        	<a href="#" class="view-rit"><div>View</div></a>
+                                        </li>
+                                        <li>
+                                        	<p>Filed Medical Assistant/phlebotomist in Detroit,MI</p>
+                                        	<a href="#">Health Care Providers > Assistants</a>
+                                        	<a href="#" class="view-rit"><div>View</div></a>
+                                        </li>
+                                    </ul>
+                                    
+                                    <div class="skyholder-botm">
+                                    	<a href="#">
+                                            View More Featured Listings
+                                            <i class="fa fa-bars"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-12">
+                            	<div class="sky-hlder">
+                                	<h2>REcent  LISTINGS</h2>
+                                    <ul class="wht-box">
+                                    	<li>
+                                        	<p>Filed Medical Assistant/phlebotomist in Detroit,MI</p>
+                                        	<a href="#">Health Care Providers > Assistants</a>
+                                        	<a href="#" class="view-rit"><div>View</div></a>
+                                        </li>
+                                        <li>
+                                        	<p>Filed Medical Assistant/phlebotomist in Detroit,MI</p>
+                                        	<a href="#">Health Care Providers > Assistants</a>
+                                        	<a href="#" class="view-rit"><div>View</div></a>
+                                        </li>
+                                        <li>
+                                        	<p>Filed Medical Assistant/phlebotomist in Detroit,MI</p>
+                                        	<a href="#">Health Care Providers > Assistants</a>
+                                        	<a href="#" class="view-rit"><div>View</div></a>
+                                        </li>
+                                    </ul>
+                                    
+                                    <div class="skyholder-botm">
+                                    	<a href="#">
+                                            View More Featured Listings
+                                            <i class="fa fa-bars"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="row product-list-container mt20">
+                            <div class="col-sm-12">
+                                <div class="product-list">
+									<!-- <div class="row"><div class="col-md-3 col-sm-4 col-xs-6"> -->
+									<div class="product-item">
+                                        <div class="prodct-hlder">
+                                            <h2><a href="#"><i class="fa fa-medkit"></i><span>Medical Services</span></a></h2>
+                                            <div class="prdtwht-box">
+                                                <ul class="prdtwht-listbx">
+                                                    <li><a href="#">Animals</a></li>
+                                                    <li><a href="#">Antiques</a></li>
+                                                    <li><a href="#">Appliances</a></li>
+                                                </ul>
+                                                <div class="text-right"><a href="#" class="lnkmore"> more &gt;</a></div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- <div class="col-md-3 col-sm-4 col-xs-6"> -->
+									<div class="product-item">
+                                        <div class="prodct-hlder">
+                                            <h2><a href="#"><i class="fa fa-medkit"></i><span>Medical Services</span></a></h2>
+                                            <div class="prdtwht-box">
+                                                <ul class="prdtwht-listbx">
+                                                    <li><a href="#">Animals</a></li>
+                                                    <li><a href="#">Antiques</a></li>
+                                                    <li><a href="#">Appliances</a></li>
+                                                    <li><a href="#">Barter</a></li>
+                                                    <li><a href="#">Bicycles</a></li>
+                                                    <li><a href="#">Books</a></li>
+                                                    <li><a href="#">CD's - records</a></li>
+                                                    <li><a href="#">Electronic</a></li>
+                                                    <li><a href="#">Furniture</a></li>
+                                                    <li><a href="#">Human Resources</a></li>
+                                                    <li><a href="#">Legal</a></li>
+                                                    <li><a href="#">Barter</a></li>
+                                                    <li><a href="#">Bicycles</a></li>
+                                                    <li><a href="#">Books</a></li>
+                                                    <li><a href="#">CD's - records</a></li>
+                                                    <li><a href="#">Electronic</a></li>
+                                                    <li><a href="#">Furniture</a></li>
+                                                    <li><a href="#">Human Resources</a></li>
+                                                    <li><a href="#">Legal</a></li>
+                                                    <li><a href="#">Furniture</a></li>
+                                                    <li><a href="#">Human Resources</a></li>
+                                                    <li><a href="#">Legal</a></li>
+                                                </ul>
+                                                <div class="text-right"><a href="#" class="lnkmore"> more &gt;</a></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- <div class="col-md-3 col-sm-4 col-xs-6"> -->
+									<div class="product-item">
+                                        <div class="prodct-hlder">
+                                            <h2><a href="#"><i class="fa fa-medkit"></i><span>Medical Services</span></a></h2>
+                                            <div class="prdtwht-box">
+                                                <ul class="prdtwht-listbx">
+                                                    <li><a href="#">Animals</a></li>
+                                                    <li><a href="#">Antiques</a></li>
+                                                    <li><a href="#">Appliances</a></li>
+                                                    <li><a href="#">Animals</a></li>
+                                                 </ul>
+                                                <div class="text-right"><a href="#" class="lnkmore"> more &gt;</a></div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- <div class="col-md-3 col-sm-4 col-xs-6"> -->
+									<div class="product-item">
+                                        <div class="prodct-hlder">
+                                            <h2><a href="#"><i class="fa fa-medkit"></i><span>Medical Services</span></a></h2>
+                                            <div class="prdtwht-box">
+                                                <ul class="prdtwht-listbx">
+                                                    <li><a href="#">Animals</a></li>
+                                                    <li><a href="#">Antiques</a></li>
+                                                    <li><a href="#">Appliances</a></li>
+                                                    <li><a href="#">Barter</a></li>
+                                                    <li><a href="#">Bicycles</a></li>
+                                                    <li><a href="#">Books</a></li>
+                                                    <li><a href="#">CD's - records</a></li>
+                                                    <li><a href="#">Electronic</a></li>
+                                                    <li><a href="#">Furniture</a></li>
+                                                    <li><a href="#">Human Resources</a></li>
+                                                    <li><a href="#">Legal</a></li>
+                                                    <li><a href="#">Furniture</a></li>
+                                                    <li><a href="#">Human Resources</a></li>
+                                                    <li><a href="#">Legal</a></li>
+                                                    <li><a href="#">Human Resources</a></li>
+                                                    <li><a href="#">Legal</a></li>
+                                                </ul>
+                                                <div class="text-right"><a href="#" class="lnkmore"> more &gt;</a></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- <div class="col-md-3 col-sm-4 col-xs-6"> -->
+									<div class="product-item">
+                                        <div class="prodct-hlder">
+                                            <h2><a href="#"><i class="fa fa-medkit"></i><span>Medical Services</span></a></h2>
+                                            <div class="prdtwht-box">
+                                                <ul class="prdtwht-listbx">
+                                                    <li><a href="#">Animals</a></li>
+                                                    <li><a href="#">Antiques</a></li>
+                                                    <li><a href="#">Appliances</a></li>
+                                                    <li><a href="#">Barter</a></li>
+                                                    <li><a href="#">Bicycles</a></li>
+                                                    <li><a href="#">Books</a></li>
+                                                    <li><a href="#">CD's - records</a></li>
+                                                    <li><a href="#">Electronic</a></li>
+                                                    <li><a href="#">Furniture</a></li>
+                                                    <li><a href="#">Human Resources</a></li>
+                                                    <li><a href="#">Legal</a></li>
+                                                </ul>
+                                                <div class="text-right"><a href="#" class="lnkmore"> more &gt;</a></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- <div class="col-md-3 col-sm-4 col-xs-6"> -->
+									<div class="product-item">
+                                        <div class="prodct-hlder">
+                                            <h2><a href="#"><i class="fa fa-medkit"></i><span>Medical Services</span></a></h2>
+                                            <div class="prdtwht-box">
+                                                <ul class="prdtwht-listbx">
+                                                    <li><a href="#">Animals</a></li>
+                                                    <li><a href="#">Antiques</a></li>
+                                                    <li><a href="#">Appliances</a></li>
+                                                    <li><a href="#">Barter</a></li>
+                                                    <li><a href="#">Bicycles</a></li>
+                                                    <li><a href="#">Books</a></li>
+                                                    <li><a href="#">CD's - records</a></li>
+                                                    <li><a href="#">Electronic</a></li>
+                                                    <li><a href="#">Furniture</a></li>
+                                                    <li><a href="#">Human Resources</a></li>
+                                                    <li><a href="#">Legal</a></li>
+                                                </ul>
+                                                <div class="text-right"><a href="#" class="lnkmore"> more &gt;</a></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- <div class="col-md-3 col-sm-4 col-xs-6"> -->
+									<div class="product-item">
+                                        <div class="prodct-hlder">
+                                            <h2><a href="#"><i class="fa fa-medkit"></i><span>Medical Services</span></a></h2>
+                                            <div class="prdtwht-box">
+                                                <ul class="prdtwht-listbx">
+                                                    <li><a href="#">Animals</a></li>
+                                                    <li><a href="#">Antiques</a></li>
+                                                    <li><a href="#">Appliances</a></li>
+                                                    <li><a href="#">Barter</a></li>
+                                                    <li><a href="#">Bicycles</a></li>
+                                                    <li><a href="#">Books</a></li>
+                                                    <li><a href="#">CD's - records</a></li>
+                                                    <li><a href="#">Electronic</a></li>
+                                                    <li><a href="#">Furniture</a></li>
+                                                    <li><a href="#">Human Resources</a></li>
+                                                    <li><a href="#">Legal</a></li>
+                                                </ul>
+                                                <div class="text-right"><a href="#" class="lnkmore"> more &gt;</a></div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- <div class="col-md-3 col-sm-4 col-xs-6"> -->
+                  <div class="product-item">
+                                        <div class="prodct-hlder">
+                                            <h2><a href="#"><i class="fa fa-medkit"></i><span>Medical Services</span></a></h2>
+                                            <div class="prdtwht-box">
+                                                <ul class="prdtwht-listbx">
+                                                    <li><a href="#">Animals</a></li>
+                                                    <li><a href="#">Antiques</a></li>
+                                                    <li><a href="#">Appliances</a></li>
+                                                    <li><a href="#">Animals</a></li>
+                                                 </ul>
+                                                <div class="text-right"><a href="#" class="lnkmore"> more &gt;</a></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- <div class="col-md-3 col-sm-4 col-xs-6"> -->
+									<div class="product-item">
+                                        <div class="prodct-hlder">
+                                            <h2><a href="#"><i class="fa fa-medkit"></i><span>Medical Services</span></a></h2>
+                                            <div class="prdtwht-box">
+                                                <ul class="prdtwht-listbx">
+                                                    <li><a href="#">Animals</a></li>
+                                                    <li><a href="#">Antiques</a></li>
+                                                    <li><a href="#">Appliances</a></li>
+                                                    <li><a href="#">Barter</a></li>
+                                                    <li><a href="#">Bicycles</a></li>
+                                                    <li><a href="#">Books</a></li>
+                                                    <li><a href="#">CD's - records</a></li>
+                                                    <li><a href="#">Electronic</a></li>
+                                                    <li><a href="#">Furniture</a></li>
+                                                    <li><a href="#">Human Resources</a></li>
+                                                    <li><a href="#">Legal</a></li>
+                                                    <li><a href="#">Electronic</a></li>
+                                                    <li><a href="#">Furniture</a></li>
+                                                    <li><a href="#">Human Resources</a></li>
+                                                </ul>
+                                                <div class="text-right"><a href="#" class="lnkmore"> more &gt;</a></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- <div class="col-md-3 col-sm-4 col-xs-6"> -->
+									<div class="product-item">
+                                        <div class="prodct-hlder">
+                                            <h2><a href="#"><i class="fa fa-medkit"></i><span>Medical Services</span></a></h2>
+                                            <div class="prdtwht-box">
+                                                <ul class="prdtwht-listbx">
+                                                    <li><a href="#">Animals</a></li>
+                                                    <li><a href="#">Antiques</a></li>
+                                                    <li><a href="#">Appliances</a></li>
+                                                    <li><a href="#">Barter</a></li>
+                                                    <li><a href="#">Bicycles</a></li>
+                                                    <li><a href="#">Books</a></li>
+                                                    <li><a href="#">CD's - records</a></li>
+                                                    <li><a href="#">Electronic</a></li>
+                                                    <li><a href="#">Furniture</a></li>
+                                                    <li><a href="#">Human Resources</a></li>
+                                                    <li><a href="#">Legal</a></li>
+                                                </ul>
+                                                <div class="text-right"><a href="#" class="lnkmore"> more &gt;</a></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                           
+                                    <!-- <div class="col-md-3 col-sm-4 col-xs-6"> -->
+									<div class="product-item">
+                                       <div class="prodct-hlder">
+                                            <h2><a href="#"><i class="fa fa-medkit"></i><span>Medical Services</span></a></h2>
+                                            <div class="prdtwht-box">
+                                                <ul class="prdtwht-listbx">
+                                                    <li><a href="#">Animals</a></li>
+                                                    <li><a href="#">Antiques</a></li>
+                                                    <li><a href="#">Appliances</a></li>
+                                                    <li><a href="#">Barter</a></li>
+                                                    <li><a href="#">Bicycles</a></li>
+                                                    <li><a href="#">Books</a></li>
+                                                    <li><a href="#">CD's - records</a></li>
+                                                    <li><a href="#">Electronic</a></li>
+                                                    <li><a href="#">Furniture</a></li>
+                                                    <li><a href="#">Human Resources</a></li>
+                                                    <li><a href="#">Legal</a></li>
+                                                    <li><a href="#">Barter</a></li>
+                                                    <li><a href="#">Bicycles</a></li>
+                                                    <li><a href="#">Books</a></li>
+                                                </ul>
+                                                <div class="text-right"><a href="#" class="lnkmore"> more &gt;</a></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                 
+                                    
+                                    <!-- <div class="col-md-3 col-sm-4 col-xs-6"> -->
+									<div class="product-item">
+                                        <div class="prodct-hlder">
+                                            <h2><a href="#"><i class="fa fa-medkit"></i><span>Medical Services</span></a></h2>
+                                            <div class="prdtwht-box">
+                                                <ul class="prdtwht-listbx">
+                                                    <li><a href="#">Animals</a></li>
+                                                    <li><a href="#">Antiques</a></li>
+                                                    <li><a href="#">Appliances</a></li>
+                                                 </ul>
+                                                <div class="text-right"><a href="#" class="lnkmore"> more &gt;</a></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- middle pannel end-->
+                	<!-- right pannel-->
+                    <div class="span-col-sm-3">
+                    	<div class="gry-holder">
+                        	<h2><i class="fa  fa-file-text"></i><span>What's Hot</span></h2>
+                            	<div id="news">
+                            	<ul class="grycntain-box">                                	
+                                        <li><a href="#">Sed tempus vestibu blandit. Suspend posuere, augue in congue fringilla.</a></li>
+                                        <li><a href="#">Sed tempus vestibu blandit. Suspend posuere, augue in congue fringilla.</a></li>
+                                        <li><a href="#">Sed tempus vestibu blandit. Suspend posuere, augue in congue fringilla.</a></li>
+                                        <li><a href="#">Sed tempus vestibu blandit. Suspend posuere, augue in congue fringilla.</a></li>
+                                        <li><a href="#">Sed tempus vestibu blandit. Suspend posuere, augue in congue fringilla.</a></li>
+                                        <li><a href="#">Sed tempus vestibu blandit. Suspend posuere, augue in congue fringilla.</a></li>
+                                </ul>
+                                </div>
+                                
+                                <div class="ticker-nav">
+                                <a class="btnUp news-btnUp" href="#"><img src="images/arrow-up.png" alt="&lt;" /></a>
+                                <a class="btnDown news-btnDown" href="#"><img src="images/arrow-down.png" alt="&gt;" /></a>
+                                </div>
+                                
+                        </div>
+                        
+                        <div class="comnity-hlder">
+                        	<a href="#"><figure><img src="images/comunity.jpg" alt="" /></figure></a>
+                        </div>
+                        
+                        <div class="bnr-hlder">
+                            <a href="#"><figure><img src="images/adertize.jpg" alt="" /></figure></a>
+                        </div>
+                
+                        <div class="bnr-hlder">
+                            <a href="#"><figure><img src="images/comunity.jpg" alt="" /></figure></a>
+                        </div>
+                
+                        <div class="bnr-hlder">
+                            <a href="#"><figure><img src="images/adertize.jpg" alt="" /></figure></a>
+                        </div>
+                
+                        <div class="bnr-hlder">
+                            <a href="#"><figure><img src="images/comunity.jpg" alt="" /></figure></a>
+                        </div>
+                    </div>
+                    <!-- right pannel end-->
+        </div><!--row-end-->
+                
+    </div>
+            
+    </div><!--container-end-->
+    
+    <!--container-end-->
+    <footer>
+            <div class="container">
+                <div class="footer-container clearfix">
+                    <div class="row">
+                        <div class="spcrpb18px clearfix">
+                        <div class="col-sm-3">
+                            <div class="contct-box">
+                                <h3>Contact Us</h3>
+                                <p>Need Assistance? Have a question that isn't answered in our help sections? You can contact support by visiting our contact us page.
+                                <a href="#" class="underline">Click Here to Contact Us</a></p>
+                            </div>
+                        </div>
+                        
+                        <div class="col-sm-3">
+                            <div class="link-box">
+                                <h3>Site LiNks</h3>
+                                <ul>
+                                    <li><a href="#"> Home</a></li>
+                                    <li><a href="#"> Search</a></li>
+                                    <li><a href="#"> Stores</a></li>
+                                    <li><a href="#"> Forum</a></li>
+                                    <li><a href="#"> Category</a></li>
+                                    <li><a href="#"> Post a free ad</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="col-sm-3">
+                            <div class="link-box">
+                                <h3>Other Links</h3>
+                                <ul>
+                                    <li><a href="#"> FAQs</a></li>
+                                    <li><a href="#"> Help</a></li>
+                                    <li><a href="#"> How It works</a></li>
+                                    <li><a href="#"> Features</a></li>
+                                    <li><a href="#"> Change Location</a></li>
+                                    <li><a href="#"> Change Language</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="col-sm-3">
+                            <div class="newslaterHoldr">
+                              <h2>Newsletter Signup</h2>
+                              <div class="input-group custom-search-form">
+                                      <input type="text" class="form-control" placeholder="Email address">
+                                      <span class="input-group-btn">
+                                      <button type="button" class="btn btn-blue">
+                                      Subscribe
+                                     </button>
+                                     </span>
+                                     </div><!-- /input-group -->
+                                <p>By clicking on the subscribe button, you agree to the <a class="graylnk underline" href="#">Privacy Policy</a>.</p>
+                            </div>
+                            
+                            <div class="social-holdr">
+                                <label>Follow Us</label>
+                                <a href="#"><img src="images/socialicon.jpg" alt="" /></a>
+                                <a href="#"><img src="images/socialicon-02.jpg" alt="" /></a>
+                                <a href="#"><img src="images/socialicon-03.jpg" alt="" /></a>
+                            </div>
+                        </div>
+                        </div>
+                        <div class="col-sm-12">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="Privacy-link">
+                                        <img src="images/PositiveSSL_tl_trans.png" class="pull-left" width="99px" heigth="93px"/>
+                                        <p>Use of this Web site constitutes acceptance of the <a href="#">User Agreement</a> and <a href="#">Privacy Policy</a>. 
+                                        Designated trademarks and brands are the property of their respective owners.</p>
+                                      <p>Copyright @ 2014 Premier Collabration, LLC. All right Reserved.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+          <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js"></script>
+          <script src="js/jquery.selectBoxIt.min.js"></script>
+          <script>
+            $(function() {
+
+              var selectBox = $("select").selectBoxIt();
+
+            });
+          </script>
+    
+    
+<script type="text/javascript" src="js/jquery.easy-ticker.min.js"></script>
+<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+<script>
+$(function(){	
+	$('#announcement').easyTicker({
+		direction: 'down',
+		interval: 4000,
+		visible: 6,
+	height: 'auto',
+		easing: 'linear',
+		controls: {
+			up: '.announcement-btnUp',
+			down: '.announcement-btnDown',
+			toggle: '.announcement-btnToggle'
+		}
+	});
+	
+	$('#news').easyTicker({
+		direction: 'down',
+		interval: 4000,
+		visible: 6,
+	height: 'auto',
+		easing: 'linear',
+		controls: {
+			up: '.news-btnUp',
+			down: '.news-btnDown',
+			toggle: '.news-btnToggle'
+		}
+	});
+	
+	
+	$('.ticker1, .ticker2').easyTicker({
+	direction: 'up',
+	easing: 'swing',
+	speed: 'slow',
+	interval: 2000,
+	height: 'auto',
+	visible: 0,
+	mousePause: 1,
+	controls: {
+		up: '',
+		down: '',
+		toggle: '',
+		playText: 'Play',
+		stopText: 'Stop'
+	}
+    });
+});
+
+</script>
+	
+  </body>
+</html>
